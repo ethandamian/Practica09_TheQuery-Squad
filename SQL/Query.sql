@@ -5,13 +5,6 @@ FROM Veterinario
 WHERE ApellidoPaterno IN (SELECT ApellidoPaterno FROM Cuidador)
    OR ApellidoMaterno IN (SELECT ApellidoMaterno FROM Cuidador);
   
- -- Si debe concordar con los dos: (Se debera cambiar el DML para que devuelva al menos 5 registros)
-SELECT *
-FROM Veterinario
-WHERE ApellidoPaterno IN (SELECT ApellidoPaterno FROM Cuidador)
-   AND ApellidoMaterno IN (SELECT ApellidoMaterno FROM Cuidador);
-
-
 
 -- Los animales herbivoros que pertenezcan al bioma bosque templado.
 SELECT *
