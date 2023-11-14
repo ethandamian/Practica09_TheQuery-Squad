@@ -19,3 +19,9 @@ WHERE IDBioma IN (
     GROUP BY IDBioma
     HAVING COUNT(*) >= 10
 ); 
+
+
+SELECT *
+FROM animal
+WHERE alimentacion = 'Herbivoro'
+AND idbioma = (SELECT idbioma FROM bioma WHERE tipobioma = 'bosque templado');
