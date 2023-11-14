@@ -27,6 +27,10 @@ AND idbioma IN (SELECT idbioma FROM bioma WHERE tipobioma = 'bosque templado');
 
 -- Los cuidadores y proveedores que vivan en el mismo estado.
 
+SELECT *
+FROM Cuidador
+WHERE estado IN (SELECT estado FROM Proveedor);
+
 
 -- Biomas que posean al menos 10 animales.
 SELECT *
