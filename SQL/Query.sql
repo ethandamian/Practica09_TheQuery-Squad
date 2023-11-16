@@ -16,7 +16,12 @@ AND idbioma IN (SELECT idbioma FROM bioma WHERE tipobioma = 'bosque templado');
 
 
 -- Alimentos de tipo semilla, que son distribuidos en el aviario.
-
+SELECT *
+FROM alimento
+WHERE tipoalimento = 'semillas'
+AND idinsumoalimento IN (SELECT idinsumoalimento 
+FROM distribuiralimento WHERE idbioma IN 
+(select idbioma from bioma where tipobioma = 'aviario'));
 
 -- Los cuidadores y proveedores que vivan en el mismo estado.
 
