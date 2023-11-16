@@ -21,7 +21,7 @@ FROM alimento
 WHERE tipoalimento = 'semillas'
 AND idinsumoalimento IN (SELECT idinsumoalimento 
 FROM distribuiralimento WHERE idbioma IN 
-(select idbioma from bioma where tipobioma = 'aviario'));
+(SELECT idbioma FROM bioma WHERE tipobioma = 'aviario'));
 
 -- Los cuidadores y proveedores que vivan en el mismo estado.
 
